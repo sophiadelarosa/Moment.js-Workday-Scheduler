@@ -56,4 +56,41 @@ $(document).ready(function() {
 
     let pm8 = localStorage.getItem("pm8");
     $("#pm8 .description").val(pm8);
+
+    $("#currentDay").text(moment().format("dddd, MMMM Do"));
+    
+
+    //function to update the time
+    function timeUpdater() {
+
+        let currentTime = parseInt(moment().format("hh"));
+        console.log(currentTime);
+
+        //I have no idea why this works it just does
+        $(".time-block").each(function() {
+            let currentTimeBlock = $(this).children().attr("id");
+            console.log(currentTimeBlock);
+            console.log(currentTime);
+            //let currentTimeBlock = parseInt($(this).attr("id").split("-")[1]);
+
+
+            if (currentTimeBlock < currentTime) {
+                //hour rows before the current hour will have the class of "past"
+                $(this).addClass("past");
+                //if the current hour is the same as that of calendar, the hour row will have the class of "present"
+            } else if (currentTimeBlock == currentTime) {
+                $(this).removeClass("past").addClass("present");
+            } else {
+                $(this).removeClass("past present").addClass("future");
+            }
+        });
+    }
+
+    //call the timeUpdater function
+    timeUpdater();
+
+    setInterval(function() {
+        timeUpdater();
+    }, 10000);
+
 });
