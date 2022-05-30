@@ -33,53 +33,52 @@ $(document).ready(function() {
     let pm12 = localStorage.getItem("pm12");
     $("#pm12 .description").val(pm12);
 
-    let pm1 = localStorage.getItem("pm1");
-    $("#pm1 .description").val(pm1);
+    let pm13 = localStorage.getItem("pm13");
+    $("#pm13 .description").val(pm13);
 
-    let pm2 = localStorage.getItem("pm2");
-    $("#pm2 .description").val(pm2);
+    let pm14 = localStorage.getItem("pm14");
+    $("#pm14 .description").val(pm14);
 
-    let pm3 = localStorage.getItem("pm3");
-    $("#pm3 .description").val(pm3);
+    let pm15 = localStorage.getItem("pm15");
+    $("#pm15 .description").val(pm15);
 
-    let pm4 = localStorage.getItem("pm4");
-    $("#pm4 .description").val(pm4);
+    let pm16 = localStorage.getItem("pm16");
+    $("#pm16 .description").val(pm16);
 
-    let pm5 = localStorage.getItem("pm5");
-    $("#pm5 .description").val(pm5);
+    let pm17 = localStorage.getItem("pm17");
+    $("#pm17 .description").val(pm17);
 
-    let pm6 = localStorage.getItem("pm6");
-    $("#pm6 .description").val(pm6);
+    let pm18 = localStorage.getItem("pm18");
+    $("#pm18 .description").val(pm18);
 
-    let pm7 = localStorage.getItem("pm7");
-    $("#pm7 .description").val(pm7);
+    let pm19 = localStorage.getItem("pm19");
+    $("#pm19 .description").val(pm19);
 
-    let pm8 = localStorage.getItem("pm8");
-    $("#pm8 .description").val(pm8);
+    let pm20 = localStorage.getItem("pm20");
+    $("#pm20 .description").val(pm20);
 
     $("#currentDay").text(moment().format("dddd, MMMM Do"));
+    let time = (moment().format("HH:mm"));
+    $("#time").text(time);
     
 
     //function to update the time
     function timeUpdater() {
 
-        let currentTime = parseInt(moment().format("hh"));
+        let currentTime = parseInt(moment().format("HH"));
         console.log(currentTime);
 
-        //I have no idea why this works it just does
         $(".time-block").each(function() {
             let currentTimeBlock = $(this).children().attr("id");
-            console.log(currentTimeBlock);
-            console.log(currentTime);
             //let currentTimeBlock = parseInt($(this).attr("id").split("-")[1]);
 
 
             if (currentTimeBlock < currentTime) {
                 //hour rows before the current hour will have the class of "past"
-                $(this).addClass("past");
+                $(this).removeClass("present future").addClass("past");
                 //if the current hour is the same as that of calendar, the hour row will have the class of "present"
             } else if (currentTimeBlock == currentTime) {
-                $(this).removeClass("past").addClass("present");
+                $(this).removeClass("past future").addClass("present");
             } else {
                 $(this).removeClass("past present").addClass("future");
             }
@@ -91,6 +90,6 @@ $(document).ready(function() {
 
     setInterval(function() {
         timeUpdater();
-    }, 10000);
+    }, 15000);
 
 });

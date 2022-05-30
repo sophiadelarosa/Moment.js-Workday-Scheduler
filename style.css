@@ -1,21 +1,19 @@
-/*font-family: 'Homemade Apple', cursive;
-font-family: 'Reenie Beanie', cursive;
-font-family: 'Satisfy', cursive;
-font-family: 'Special Elite', cursive;*/
-
 body {
-  background-image: url("./assets/images/kawaiibackground.jpg");
+  background-image: url("./assets/images/magiclocker.png");
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
-.jumbotron {
+header {
+  padding-top: 60px;
+  padding-bottom: 20px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.452);
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid rgb(76, 55, 133);
+  margin-bottom: 50px;
 }
 
 h1 {
@@ -26,69 +24,72 @@ p {
   font-family: 'Amiri', serif;
 }
 
-
-.btn:hover {
-  color:rgb(231, 135, 151);
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 45px;
-  margin-bottom: 15px;
-}
-
 .time-block {
+  margin-top: 15px;
   text-align: center;
   border-radius: 5px;
+  white-space: pre-wrap;
+  height: 50px;
+  margin-bottom: 10px;
+  padding-top: 10px;
 }
 
 .hour {
-  background-color: #06afd5b0;
-  color: white;
+  height: 40px;
+  background-color: #06afd5;
   padding-top: 13px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  
-}
-
-textarea {
-  background: white;
-  border: none;
-  resize: none;
-  color: rgb(231, 135, 151);
-  border-left: 3px dashed rgb(231, 135, 151);
-  padding: 10px;
 }
 
 .description {
   white-space: pre-wrap;
+  color: rgb(231, 135, 151);
+  border-left: 3px dashed rgb(231, 135, 151);
+  height: 40px;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  height: 41px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #06aed5;
+  background-color: #836eb4;
   color: white;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
+.btn:hover {
+  color:rgb(255, 240, 108);
   transition: all 0.3s ease-in-out;
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #5050509d;
   color: white;
+  height: 55px;
+  padding-top: 7px;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: rgba(255, 240, 108, 0.808);
   color: white;
+  height: 55px;
+  padding-top: 7px;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #77dd77bd;
   color: white;
+  height: 55px;
+  padding-top: 7px;
 }
 
+footer {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.452);
+  color: black;
+  border-radius: 0;
+  border-top: 10px solid rgb(76, 55, 133);
+  margin-top: 50px;
+}
