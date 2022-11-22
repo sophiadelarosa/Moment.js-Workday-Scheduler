@@ -1,4 +1,4 @@
-# 05 Third-Party APIs: Day Planner
+# Third-Party APIs: Day Planner
 
 ## by Sophia De La Rosa
 
